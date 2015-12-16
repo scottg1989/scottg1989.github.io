@@ -1,0 +1,19 @@
+<div class="post-detail-container">
+  <div>
+    <a class="post-detail-title" href="{{postDetail.post.link}}">{{postDetail.post.title}}</a>
+    <a class="back-button" ui-sref="posts">Back</a>
+  <div>
+  <div>
+    <a ng-href="https://www.flickr.com/people/{{postDetail.post.author_id}}" class="post-detail-author">{{postDetail.post.authorName}}</a>Published: {{postDetail.post.published | ordinalDate:'d MMM yyyy \'at\' HH:mm'}}
+  </div>
+  <div class="post-detail-image-content">
+    <img class="post-detail-photo" ng-src="{{postDetail.post.media.m}}"></image>
+    <div class="post-detail-description">
+      <div class="post-detail-description-text" ng-if="postDetail.post" ng-bind-html="postDetail.imageDescription()">
+      </div>
+      <div class="post-detail-tags">
+        <span class="post-detail-tag-label">Tags:&nbsp;</span><a class="post-detail-tag" ng-repeat="tag in postDetail.tagsArray()" ng-href="https://www.flickr.com/search/?tags={{tag}}">{{tag}}</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<ul class="results-list">
+  <li class="results-list-post" ng-repeat="post in postsListing.posts()">
+    <a class="post-detail-link" ui-sref="postDetail({ postId: post.id })">
+      <img class="post-image" ng-src="{{post.media.m}}"></image><!--
+ --></a><!--
+ --><div class="post-details">
+      <div>
+        <a class="post-title" ui-sref="postDetail({ postId: post.id })">{{post.title}}</a>
+      </div>
+      <div class="post-info">
+        <a class="post-link" ng-href="https://www.flickr.com/people/{{post.author_id}}">{{post.authorName}}</a>
+        <span class="post-published-at">Published: {{post.published | ordinalDate:'d MMM yyyy \'at\' HH:mm'}}</span>
+        <a class="post-link" href="{{post.link}}">View on Flickr</a>
+      </div>
+    </div>
+  </li>
+</ul>
