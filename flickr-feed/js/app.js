@@ -9,13 +9,13 @@
         $stateProvider
         .state('posts', {
             url: "/posts",
-            templateUrl: "/partials/postsListing.html",
+            templateUrl: "/flickr-feed/partials/postsListing.html",
             controller: 'postsCtrl',
             controllerAs: 'postsListing'
         })
         .state('postDetail', {
             url: "/posts/:postId",
-            templateUrl: "/partials/postDetail.html",
+            templateUrl: "/flickr-feed/partials/postDetail.html",
             controller: 'postDetailCtrl',
             controllerAs: 'postDetail'
         });
